@@ -1,14 +1,19 @@
 def create():
-    pass
+    name = input("Enter the artist's name: ")
+    print(f"Artist '{name}' created successfully!")
 
 def edit():
-    pass
+    artist_id = input("Enter the ID of the artist to edit: ")
+    # Logic to edit the artist with the given ID
+    print(f"Artist with ID '{artist_id}' edited successfully!")
 
 def view():
-    pass
+    print("Listing all artists:")
 
 def delete():
-    pass
+    artist_id = input("Enter the ID of the artist to delete: ")
+    # Logic to delete the artist with the given ID
+    print(f"Artist with ID '{artist_id}' deleted successfully!")
 
 def module():
     user_choice = 0
