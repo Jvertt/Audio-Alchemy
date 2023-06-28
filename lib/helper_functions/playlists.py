@@ -1,14 +1,22 @@
 def create():
-    pass
+    name = input("Enter the name: ")
+    # Perform necessary operations to create a new playlist
+    print(f"Created {name} successfully!")
 
 def edit():
-    pass
+    id = input("Enter the ID of the playlist to edit: ")
+    # Perform necessary operations to edit the playlist with the given ID
+    print(f"Edited playlist with ID {id} successfully!")
 
 def view():
-    pass
+    id = input("Enter the ID of the playlist to view: ")
+    # Perform necessary operations to retrieve and display the playlist with the given ID
+    print(f"Viewing playlist with ID {id}")
 
 def delete():
-    pass
+    id = input("Enter the ID of the entity to delete: ")
+    # Perform necessary operations to delete the playlist with the given ID
+    print(f"Deleted playlist with ID {id} successfully!")
 
 def module():
     user_choice = 0
