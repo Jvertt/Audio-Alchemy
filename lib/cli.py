@@ -1,5 +1,7 @@
 import sys
 import importlib
+from helper_functions import songs, playlists, artists
+
 sys.path.append('./helper_functions')
 
 songs = importlib.import_module('songs')
@@ -19,11 +21,11 @@ def app():
         ''')
         user_choice = int(input("Please enter your choice: "))
         if user_choice == 1:
-            pass
+            artists.module()
         elif user_choice == 2:
-            pass
+            songs.module()
         elif user_choice == 3:
-            pass
+            playlists.module()
         elif user_choice == 4:
             return print('Thanks for using my CLI')
         else: 
