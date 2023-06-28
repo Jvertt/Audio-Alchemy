@@ -21,7 +21,7 @@ def module():
             2 - Edit song
             3 - View Songs
             4 - Delete song
-            5 - exit
+            5 - Back
         ''')
         user_choice = int(input("Please enter your choice: "))
         if user_choice == 1:
