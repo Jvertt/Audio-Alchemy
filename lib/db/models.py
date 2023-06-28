@@ -28,9 +28,3 @@ class Artist(Base):
     id = Column(Integer, primary_key=True)
     name = Column(String(255), nullable=False)
     bio = Column(String(255))
-
-class PlaylistSong(Base):
-    __tablename__ = 'playlist_songs'
-
-    playlist_id = Column(Integer, ForeignKey('playlists.id'), primary_key=True)
-    song_id = Column(Integer, ForeignKey('songs.id'), primary_key=True)

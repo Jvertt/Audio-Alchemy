@@ -1,25 +1,36 @@
-from helpers import (
-    function_1, function_2,
-    function_3, function_4,
-    function_5, function_6,
-    function_7, function_8,
-    function_9, function_10
-)
+import sys
+import importlib
+sys.path.append('./helper_functions')
 
-if __name__ == '__main__':
+songs = importlib.import_module('songs')
+playlists = importlib.import_module('playlists')
+artists = importlib.import_module('artists')
+
+def app():
     print('Welcome to my CLI!')
-    function_1()
-    x = 0
-    while not x:
-        x = function_2(x)
-    if x < 0:
-        y = function_3(x)
-    else:
-        y = function_4(x)
-    z = function_5(y)
-    z = function_6(z)
-    z = function_7(z)
-    z = function_8(z)
-    function_9(z)
-    function_10(x, y, z)
-    print('Thanks for using my CLI')
+    user_choice = 0
+    while user_choice != 4:
+        print(f'''
+            Where would you like to go?
+            1 - artists
+            2 - songs
+            3 - playlists
+            4 - exit
+        ''')
+        user_choice = int(input("Please enter your choice: "))
+        if user_choice == 1:
+            pass
+        elif user_choice == 2:
+            pass
+        elif user_choice == 3:
+            pass
+        elif user_choice == 4:
+            return print('Thanks for using my CLI')
+        else: 
+            print("Invalid choice. Please try again.")
+
+    
+if __name__ == '__main__': 
+    print("Welcome")
+    app()
+    print("Come Back Again!")
