@@ -2,8 +2,9 @@ from sqlalchemy import Column, ForeignKey, Integer, String
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import relationship
 
-Base = declarative_base()
 
+Base = declarative_base()
+ 
 class Song(Base):
     __tablename__ = 'songs'
 
@@ -13,7 +14,6 @@ class Song(Base):
     album = Column(String(255))
     genre = Column(String(255))
     duration = Column(Integer)
-    file_location = Column(String(255))
 
 class Playlist(Base):
     __tablename__ = 'playlists'
@@ -28,3 +28,9 @@ class Artist(Base):
     id = Column(Integer, primary_key=True)
     name = Column(String(255), nullable=False)
     bio = Column(String(255))
+
+
+if __name__ == '__main__':
+    print("Welcome")
+    app()
+    print("Come Back Again!")
