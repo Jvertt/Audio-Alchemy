@@ -1,10 +1,9 @@
-from sqlalchemy import Column, ForeignKey, Integer, String
+from sqlalchemy import Column, ForeignKey, Integer, String, Table
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import relationship, backref
 
-
 Base = declarative_base()
- 
+
 class Song(Base):
     __tablename__ = 'songs'
 

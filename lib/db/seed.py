@@ -41,20 +41,20 @@ def seed_data():
         songs.append(song)
 
     # Generate playlist data
-    playlists = []
-    for i in range(3):
-        playlist = Playlist(
-            name=faker.word(),
-            description=faker.sentence()
-        )
-        playlists.append(playlist)
+    # playlists = []
+    # for i in range(3):
+    #     playlist = Playlist(
+    #         name=faker.word(),
+    #         description=faker.sentence()
+    #     )
+    #     playlists.append(playlist)
 
-    # Add songs to playlists
-    for playlist in playlists:
-        playlist.songs.extend(random.choices(songs, k=5))
+    # # Add songs to playlists
+    # for playlist in playlists:
+    #     playlist.songs.extend(random.choices(songs, k=5))
 
     # Add all data to the session
-    session.add_all(artists + songs + playlists)
+    session.add_all(artists + songs)
     session.commit()
     print("Data seeding completed successfully.")
 
