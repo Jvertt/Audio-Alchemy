@@ -1,6 +1,6 @@
 from sqlalchemy import Column, ForeignKey, Integer, String
 from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy.orm import relationship
+from sqlalchemy.orm import relationship, backref
 
 
 Base = declarative_base()
@@ -14,6 +14,8 @@ class Song(Base):
     album = Column(String(255))
     genre = Column(String(255))
     duration = Column(Integer)
+
+    artist = relationship("Artist", backref=backref('songs'))
 
 class Playlist(Base):
     __tablename__ = 'playlists'
@@ -32,5 +34,4 @@ class Artist(Base):
 
 if __name__ == '__main__':
     print("Welcome")
-    app()
     print("Come Back Again!")
