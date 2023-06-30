@@ -16,6 +16,9 @@ class Song(Base):
 
     artist = relationship("Artist", backref=backref('songs'))
 
+    def __repr__(self):
+        return f'<Song(id={self.id}, title="{self.title}", artist_id={self.artist_id}, album="{self.album}", genre="{self.genre}", duration={self.duration})>'
+
 class Playlist(Base):
     __tablename__ = 'playlists'
 
@@ -29,6 +32,9 @@ class Artist(Base):
     id = Column(Integer, primary_key=True)
     name = Column(String(255), nullable=False)
     bio = Column(String(255))
+
+    def __repr__(self):
+        return f'<Artist(id={self.id}, name="{self.name}", bio="{self.bio}")>'
 
 
 if __name__ == '__main__':
