@@ -58,8 +58,5 @@ def seed_data():
     session.commit()
     print("Data seeding completed successfully.")
     
-
-    
-
 if __name__ == '__main__':
     seed_data()

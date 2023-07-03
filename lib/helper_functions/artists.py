@@ -1,6 +1,6 @@
 from sqlalchemy import create_engine
 from sqlalchemy.orm import Session
-from db.models import Artist, Playlist, Song
+from db.models import Artist
 
 engine = create_engine("sqlite:///db/songs.db") 
 session = Session(engine, future=True)

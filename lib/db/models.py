@@ -48,7 +48,3 @@ class Artist(Base):
     def __repr__(self):
         return f'<Artist(id={self.id}, name="{self.name}", bio="{self.bio}")>'
 
-
-if __name__ == '__main__':
-    print("Welcome")
-    print("Come Back Again!")
