@@ -1,7 +1,5 @@
 import sys
 import importlib
-from helper_functions import songs, playlists, artists
-
 sys.path.append('./helper_functions')
 
 songs = importlib.import_module('songs')
