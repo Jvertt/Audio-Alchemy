@@ -1,9 +1,8 @@
-# Phase 3 CLI Project Template
+# Audio Alchemy
 
-## Learning Goals
+## Description
 
-- Discuss the basic directory structure of a CLI.
-- Outline the first steps in building a CLI.
+This Python command-line interface (CLI) application allows you to efficiently manage songs, playlists, and artists in a simple and intuitive manner. With this tool, you can create, edit, and delete songs, playlists, and artists, making it easy to organize your music collection.
 
 ***
 
