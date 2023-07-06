@@ -6,12 +6,16 @@ This Python command-line interface (CLI) application allows you to efficiently m
 
 ***
 
-## Introduction
+## Installation
 
-You now have a basic idea of what constitutes a CLI, but you (understandably!)
-likely don't have the best idea of where to start. Fork and clone this lesson
-for a template for your CLI. Take a look at the directory structure before we
-begin:
+To install and run Audio Alchemy, ensure that you have Python 3 and pip installed on your system.
+
+* Clone this repository to your local machine and navigate to its directory.
+* Run pipenv install to install all the necessary package dependencies.
+* Run pipenv shell to enter the virtual environment.
+* Navigate to the lib/db directory and run python seed.py to populate the database with mock data.
+* Return to the lib directory by running cd ..
+* Run python cli.py to start using TransXceed.
 
 ```console
 .
