@@ -30,27 +30,28 @@ Main Menu
 
 ***
 
-1 - Create artist
-2 - View artists
-3 - Delete Artists
-4 - back
+1. Create artist
+2. View artists
+3. Delete Artists
+4. back
 
 ***
 
-1 - Create song
-2 - View songs
-3 - Delete song
-4 - back
+1. Create song
+2. View songs
+3. Delete song
+4. back
 
 ***
 
-1 - Create playlist
-2 - View playlists
-3 - Delete playlist
-4 - back
+1. Create playlist
+2. View playlists
+3. Delete playlist
+4. back
 
 ## Resources
 
-- [Setting up a respository - Atlassian](https://www.atlassian.com/git/tutorials/setting-up-a-repository)
-- [Create a repo- GitHub Docs](https://docs.github.com/en/get-started/quickstart/create-a-repo)
-- [Markdown Cheat Sheet](https://www.markdownguide.org/cheat-sheet/)
+- [SQLite](https://sqlite.org/index.html)
+- [SQLALchemy](https://www.sqlalchemy.org/)
+- [Faker](https://faker.readthedocs.io/en/master/)
+- [Alembic](https://alembic.sqlalchemy.org/en/latest/)
