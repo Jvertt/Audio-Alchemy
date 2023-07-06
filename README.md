@@ -23,10 +23,10 @@ When running this app, you will encounter a main menu that will give you paths t
 
 Main Menu 
 
-1 - artists
-2 - songs
-3 - playlists
-4 - exit
+1. artists
+2. songs
+3. playlists
+4. exit
 
 ***
 
