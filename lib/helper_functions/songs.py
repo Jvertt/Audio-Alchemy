@@ -41,7 +41,6 @@ def view():
     for songs in all_songs:
         print(f"Song ID: {songs.id}")
         print(f"Name: {songs.title}")
-        print(f"Artist: {songs.artist}")
         print(f"Album: {songs.album}")
         print(f"Genre:{songs.genre}")
         print(f"Duration:{songs.duration} ")
@@ -52,7 +51,6 @@ def delete():
     for songs in all_songs:
         print(f"Song ID: {songs.id}")
         print(f"Name: {songs.title}")
-        print(f"Artist: {songs.artist}")
         print(f"Album: {songs.album}")
         print(f"Genre:{songs.genre}")
         print(f"Duration:{songs.duration} ")
