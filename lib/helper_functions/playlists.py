@@ -1,6 +1,16 @@
 from sqlalchemy import create_engine
 from sqlalchemy.orm import Session
 from db.models import Playlist, Song
+from cli import pyfiglet
+
+class Color:
+    RED = '\033[91m'
+    GREEN = '\033[92m'
+    YELLOW = '\033[93m'
+    BLUE = '\033[94m'
+    MAGENTA = '\033[95m'
+    CYAN = '\033[96m'
+    RESET = '\033[0m'
 
 engine = create_engine("sqlite:///db/songs.db") 
 session = Session(engine, future=True)
@@ -61,7 +71,7 @@ def delete():
         print(f"Description: {playlist.description}")
         print()
 
-    id = input("Enter the ID of the entity to delete: ")
+    id = input("Enter the ID of the playlist to delete: ")
 
     playlist = session.query(Playlist).get(id)
 
@@ -75,13 +85,18 @@ def delete():
 def module():
     user_choice = 0
     while user_choice != 5:
-        print('''
+        print(f'''
             Where would you like to go?
-            1 - Create playlist
-            2 - View Playlist
-            3 - Add Song To Playlist
-            4 - Delete Playlist
-            5 - Back
+            ---------------------------
+            1 - {Color.GREEN}Create playlist{Color.RESET}
+
+            2 - {Color.GREEN}View Playlist{Color.RESET}
+
+            3 - {Color.GREEN}Add Song To Playlist{Color.RESET}
+
+            4 - {Color.GREEN}Delete Playlist{Color.RESET}
+
+            5 - {Color.RED}Back{Color.RESET}
         ''')
         user_choice = int(input("Please enter your choice: "))
         if user_choice == 1:

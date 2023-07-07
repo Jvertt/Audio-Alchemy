@@ -1,6 +1,16 @@
 from sqlalchemy import create_engine
 from sqlalchemy.orm import Session
 from db.models import Artist, Song
+from cli import pyfiglet
+
+class Color:
+    RED = '\033[91m'
+    GREEN = '\033[92m'
+    YELLOW = '\033[93m'
+    BLUE = '\033[94m'
+    MAGENTA = '\033[95m'
+    CYAN = '\033[96m'
+    RESET = '\033[0m'
 
 engine = create_engine("sqlite:///db/songs.db") 
 session = Session(engine, future=True)
@@ -62,12 +72,17 @@ def delete():
 def module():
     user_choice = 0
     while user_choice != 4:
-        print('''
+        print(f'''
+
             Where would you like to go?
-            1 - Create Song
-            2 - View Songs
-            3 - Delete Song
-            4 - Back
+            ---------------------------
+            1 - {Color.GREEN}Create Song{Color.RESET}
+
+            2 - {Color.GREEN}View Songs{Color.RESET}
+
+            3 - {Color.GREEN}Delete Song{Color.RESET}
+
+            4 - {Color.RED}Back{Color.RESET}
         ''')
         user_choice = int(input("Please enter your choice: "))
         if user_choice == 1:
