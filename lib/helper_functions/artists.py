@@ -44,10 +44,10 @@ def module():
     while user_choice != 4:
         print('''
             Where would you like to go?
-            1 - Create artist
-            2 - View artists
-            3 - Delete artist
-            4 - back
+            1 - Create Artist
+            2 - View Artists
+            3 - Delete Artist
+            4 - Back
         ''')
         user_choice = int(input("Please enter your choice: "))
         if user_choice == 1:

@@ -1,6 +1,6 @@
 from sqlalchemy import create_engine
 from sqlalchemy.orm import Session
-from db.models import Playlist
+from db.models import Playlist, Song
 
 engine = create_engine("sqlite:///db/songs.db") 
 session = Session(engine, future=True)
@@ -21,7 +21,24 @@ def view():
         print(f"Playlist ID: {playlist.id}")
         print(f"Name: {playlist.name}")
         print(f"Description: {playlist.description}")
+        print("Songs:")
+        for song in playlist.songs:
+            print(f" - {song.title} by {song.artist.name}")
         print()
+
+def add_song_to_playlist():
+    playlist_id = input("Enter the ID of the playlist: ")
+    song_id = input("Enter the ID of the song: ")
+
+    playlist = session.query(Playlist).get(playlist_id)
+    song = session.query(Song).get(song_id)
+
+    if playlist and song:
+        playlist.songs.append(song)
+        session.commit()
+        print(f"Added song '{song.title}' to playlist '{playlist.name}' successfully!")
+    else:
+        print("Playlist or song not found.")
 
 def delete():
     all_playlists = session.query(Playlist).all()
@@ -44,13 +61,14 @@ def delete():
 
 def module():
     user_choice = 0
-    while user_choice != 4:
+    while user_choice != 5:
         print('''
-         Where would you like to go?
+            Where would you like to go?
             1 - Create playlist
-            2 - View playlists
-            3 - Delete playlist
-            4 - Back
+            2 - View Playlist
+            3 - Add Song To Playlist
+            4 - Delete Playlist
+            5 - Back
         ''')
         user_choice = int(input("Please enter your choice: "))
         if user_choice == 1:
@@ -58,8 +76,10 @@ def module():
         elif user_choice == 2:
             view()
         elif user_choice == 3:
-            delete()
+            add_song_to_playlist()
         elif user_choice == 4:
+            delete()
+        elif user_choice == 5:
             print('Going back to the main menu.')
         else:
             print("Invalid choice. Please try again.")

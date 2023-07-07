@@ -64,9 +64,9 @@ def module():
     while user_choice != 4:
         print('''
             Where would you like to go?
-            1 - Create song
+            1 - Create Song
             2 - View Songs
-            3 - Delete song
+            3 - Delete Song
             4 - Back
         ''')
         user_choice = int(input("Please enter your choice: "))
