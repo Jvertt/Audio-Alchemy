@@ -27,7 +27,20 @@ def view():
         print()
 
 def add_song_to_playlist():
+    all_playlists = session.query(Playlist).all()
+    for playlist in all_playlists:
+        print(f"Playlist ID: {playlist.id}")
+        print(f"Name: {playlist.name}")
+        print()
+
     playlist_id = input("Enter the ID of the playlist: ")
+
+    all_songs= session.query(Song).all()
+    for songs in all_songs:
+        print(f"Song ID: {songs.id}")
+        print(f"Name: {songs.title}")
+        print()
+
     song_id = input("Enter the ID of the song: ")
 
     playlist = session.query(Playlist).get(playlist_id)
